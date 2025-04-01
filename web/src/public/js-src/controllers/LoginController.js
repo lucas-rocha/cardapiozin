@@ -9,7 +9,7 @@ export class LoginController {
   async authenticate(event) {
     event.preventDefault()
 
-    const response = await fetch('http://localhost:5000/auth/customer-login', {
+    const response = await fetch('http://212.85.0.193:5000/auth/customer-login', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
