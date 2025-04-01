@@ -40,7 +40,7 @@ export class RegisterContoller {
 
     console.log(this._createCustomer())
 
-    const response = await fetch('http://localhost:5000/customers', {
+    const response = await fetch('http://212.85.0.193:5000/customers', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
