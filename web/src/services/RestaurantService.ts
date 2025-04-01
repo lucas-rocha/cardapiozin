@@ -7,7 +7,7 @@ const restaurants = [
 export class RestaurantService {
   static async findBySubdomain(subdomain: string| undefined) {
     try {
-      const response = await fetch(`http://localhost:5000/info/${subdomain}`);
+      const response = await fetch(`http://212.85.0.193:5000/info/${subdomain}`);
       if (!response.ok) {
         throw new Error(`Erro na requisição: ${response.statusText}`);
       }
