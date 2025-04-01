@@ -1,0 +1,1 @@
+{"version":3,"file":"mapper.js","sourceRoot":"","sources":["../../../src/util/mapper.ts"],"names":[],"mappings":";;;AAAA,SAAgB,MAAM,CAAgC,GAAe,EAAE,WAAsC;IACzG,MAAM,YAAY,GAAG,IAAI,WAAW,CAAC,GAAG,MAAM,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,CAAC;IAC5D,OAAO,MAAM,CAAC,MAAM,CAAC,YAAY,EAAE,GAAG,CAAC,CAAC;AAC5C,CAAC;AAHD,wBAGC"}

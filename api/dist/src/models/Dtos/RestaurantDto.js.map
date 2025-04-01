@@ -1,0 +1,1 @@
+{"version":3,"file":"RestaurantDto.js","sourceRoot":"","sources":["../../../../src/models/Dtos/RestaurantDto.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,qDAA6C;AAE7C,MAAa,aAAa;CAYzB;AAZD,sCAYC;AANC;IAHC,IAAA,4BAAU,EAAC;QACV,OAAO,EAAE,kBAAkB;KAC5B,CAAC;;8CACc;AAKhB;IAHC,IAAA,4BAAU,EAAC;QACV,OAAO,EAAE,qCAAqC;KAC/C,CAAC;;sDACsB"}
