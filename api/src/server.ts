@@ -34,7 +34,7 @@ export class SetupServer extends Server {
   
   private setupExpress(): void {
     const corsOptions = {
-      origin: ['http://localhost:3000', 'http://hamburgueria.localhost:4000'],
+      origin: ['http://localhost:3000', 'http://hamburgueria.localhost:4000', 'http://localhost:4000'],
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
       credentials: true,
     }
