@@ -34,7 +34,7 @@ export class SetupServer extends Server {
   
   private setupExpress(): void {
     const corsOptions = {
-      origin: ['http://212.85.0.193:3000', 'http://212.85.0.193:4000'],
+      origin: ['http://212.85.0.193:3000', 'http://212.85.0.193:4000', /\.cardapiozin\.com$/],
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
       credentials: true,
     }
