@@ -14,7 +14,7 @@ const authMiddleware = async (req: Request, res: Response, next: NextFunction) =
   
     req.context.user_id = claims.user_id
     
-    const customer = await axios(`http://localhost:5000/customers/me`, {
+    const customer = await axios(`http://212.85.0.193:5000/customers/me`, {
       headers: {
         'x-access-token': token
       }
