@@ -1,0 +1,15 @@
+.questions__accordion--active {
+  color: #FF4545;
+}
+
+.stepper__item--next {
+  > .stepper__name {
+    color: $color-base;
+  }
+}
+
+.stepper__item--completed {
+  > .stepper__name {
+    color: $color-primary;
+  }
+}

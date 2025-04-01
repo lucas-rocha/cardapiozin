@@ -1,0 +1,63 @@
+<section class="cadastro">
+  <div class="container cadastro__container">
+    <img src="./images/logo.png" />
+  </div>
+  <div class="container stepper__container">
+    <div class="stepper-wrapper">
+      <div class="stepper__item stepper__item--next" data-step="1">
+        <div class="stepper__image"><img src="./images/step-actual.png" /></div>
+        <div class="stepper__divisor"></div>
+        <div class="stepper__name">Conta</div>
+      </div>
+      {{!-- <div class="stepper__item" data-step="2">
+        <div class="stepper__image"><img src="./images/step-next.png" /></div>
+        <div class="stepper__divisor"></div>
+        <div class="stepper__name">Credenciais</div>
+      </div> --}}
+      <div class="stepper__item" data-step="3">
+        <div class="stepper__image"><img src="./images/step-next.png" /></div>
+        <div class="stepper__name">Publicar</div>
+      </div>
+    </div>
+
+    <div class="cadastro-container">
+      <form class="cadastro-form">
+        <div class="subscribe-form__inputwrapper cadastro-form__inputwrapper active" id="step-1" data-step="1">
+          <label for="" class="subscribe-form__label">Digite seu nome</label>
+          <input type="text" class="subscribe-form__input" placeholder="Nome" name="name" id="nomeRegister" required>
+          <label for="" class="subscribe-form__label">Digite seu sobrenome</label>
+          <input type="text" class="subscribe-form__input" placeholder="Sobrenome" name="lastname" id="lastNameRegister" required>
+          <label for="" class="subscribe-form__label">Digite seu e-mail</label>
+          <input type="email" class="subscribe-form__input" placeholder="Digite seu e-mail" name="email" id="emailRegister" required>
+          <label for="" class="subscribe-form__label">Digite seu telefone</label>
+          <div class="subscribe-form__telarea">
+            <input type="text"  class="subscribe-form__input subscribe-form__ddd" placeholder="(DDD)" pattern="[0-9]{2}" id="dddRegister" required/>
+            <input type="text" class="subscribe-form__input" placeholder="Telefone" name="estabelecimento" pattern="([0-9]{4}-[0-9]{4}|9[0-9]{4}-[0-9]{4})" id="telefoneRegister" required>
+          </div>
+          <button type="button" class="subscribe-form__button cadastro-form__button">Salvar e continuar</button>
+        </div>
+
+        {{!-- <div class="subscribe-form__inputwrapper cadastro-form__inputwrapper" id="step-2" data-step="2">
+          <label for="" class="subscribe-form__label">Digite uma senha</label>
+          <input type="password" class="subscribe-form__input" placeholder="Nome" name="name" id="password" required>
+          <label for="" class="subscribe-form__label">Digite a senha</label>
+          <input type="password" class="subscribe-form__input" placeholder="Digite seu e-mail" name="email" id="passwordTwo" required>
+          <div class="cadastro-form__buttons">
+            <button type="button" class="subscribe-form__button cadastro-form__button">Voltar</button>
+            <button type="button" class="subscribe-form__button cadastro-form__button">Salvar e continuar</button>
+          </div>
+        </div> --}}
+
+        <div class="subscribe-form__inputwrapper cadastro-form__inputwrapper" id="step-3" data-step="3">
+          <label for="" class="subscribe-form__label">Digite o nome do cardápio</label>
+          <input type="text" class="subscribe-form__input" placeholder="Nome" name="name" id="restaurantName" required>
+          <div class="cadastro-form__buttons">
+            <button type="button" class="subscribe-form__button cadastro-form__button">Voltar</button>
+            <button type="submit" class="subscribe-form__button cadastro-form__button">Cadastrar</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>

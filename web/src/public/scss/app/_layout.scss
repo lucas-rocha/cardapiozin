@@ -1,0 +1,57 @@
+.container {
+  width: 100%;
+  padding: 0 1rem;
+
+  @include app-screen-md {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.config {
+  padding-top: 1rem;
+  background-color: #fff;
+
+  &__image {
+    display: none;
+  }
+}
+
+.address {
+  padding: 1.5rem 0;
+
+  > p {
+    font-weight: 500;
+  }
+}
+
+.category-section {
+  padding: 1.5rem 0;
+}
+
+.bag-item__container {
+  overflow-y: auto !important;
+  max-height: 467px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 70px;
+  bottom: 0;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.26);
+  font-size: 12px;
+  color: #555555;
+}
+
+.shopping {
+  margin-bottom: 6rem;
+}
+
+.checkout {
+  &__container {
+    padding: 2rem;
+  }
+}

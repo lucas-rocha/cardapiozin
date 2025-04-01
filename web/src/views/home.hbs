@@ -1,0 +1,395 @@
+<section class="hero">
+  <header class="header">
+    <div class="container header__container">
+      <a href="/" style="display: flex;">
+        <img src="./images/logo.png" alt="Logotipo do Cardapiozin, plataforma de cardápios online">
+      </a>
+
+      <nav class="nav-header">
+        <ul>
+          <li class="nav-header__item"><a href="/">Ínicio</a></li>
+          <li class="nav-header__item"><a href="#planos">Planos e Preços</a></li>
+          <li class="nav-header__item"><a href="#">Login</a></li>
+        </ul>
+
+        {{!-- <a href="https://app.cardapiozin.com.br/login" class="actions-link__item actions-link__header">
+          Login
+          <img src="./images/account_icon.png" />
+        </a> --}}
+        <a href="http://hamburgueria.localhost:4000" class="actions-link__item actions-link__header">
+          Ver demo
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <section class="main-intro">
+    <div class="container">
+      <section class="intro">
+        <h1 class="intro__text">O Futuro do seu Cardápio Online Grátis - Inscrição Exclusiva!</h1>
+        <p class="intro__paragraph">
+          Seja um pioneiro na revolução gastronômica! Ao fazer sua inscrição hoje, você não apenas assegura seu lugar na vanguarda do universo dos cardápios online, mas 
+          também desbloqueia uma oferta exclusiva que você não pode perder.
+        </p>
+
+        <div class="actions-link">
+          <a href="/criar-conta" class="actions-link__item gradient-tomato">
+            Fazer inscrição
+            <img src="./images/arrow-right.png" />
+          </a>
+          <a href="http://hamburgueria.localhost:4000" class="actions-link__item second-support">Ver Demo</a>
+        </div>
+
+        <p class="intro__obs"> Ainda não tem certeza? <a href="#transforme-seu-delivery">veja como podemos transformar seu delivery</a></p>
+      </section>
+
+      <section class="subscribe-section">
+        <form method="post" class="subscribe-form__form">
+          <h3 class="subscribe-form__title">Faça sua inscrição</h3>
+          <p class="subscribe-form__paragraph">Ganhe 1 mês de mensalidade gratuita</p>
+          <div class="subscribe-form__inputwrapper">
+            <label for="" class="subscribe-form__label">Digite seu nome</label>
+            <input type="text" class="subscribe-form__input" placeholder="Nome" name="name" id="nome" required>
+            <label for="" class="subscribe-form__label">Digite seu e-mail</label>
+            <input type="email" class="subscribe-form__input" placeholder="Digite seu e-mail" name="email" id="email" required>
+            <label for="" class="subscribe-form__label">Digite seu telefone</label>
+            <div class="subscribe-form__telarea">
+              <input type="text"  class="subscribe-form__input subscribe-form__ddd" placeholder="(DDD)" pattern="[0-9]{2}" id="ddd" required/>
+              <input type="text" class="subscribe-form__input" placeholder="Telefone" name="estabelecimento" pattern="([0-9]{4}-[0-9]{4}|9[0-9]{4}-[0-9]{4})" id="telefone" required>
+            </div>
+            <button type="submit" class="subscribe-form__button">Salvar</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </section>
+
+</section>
+
+<section class="product-presentation">
+  <div class="container product-presentation__container">
+    <img src="./images/logo.png" alt="Logotipo do Cardapiozin, plataforma de cardápios online" class="product-presentation__logo">
+    <div class="product-presentation__wrapper">
+      <div class="product-presentation__text">
+        <h2 class="product-presentation__title">Dashboard e Aplicativo para Restaurantes - Gestão Simplificada</h2>
+        <p class="product-presentation__paragraph">Nossa plataforma oferece todas as ferramentas que você precisa para acompanhar suas vendas, ajustar horários, gerenciar cardápios e muito mais, de forma simples e acessível. Tenha controle total a qualquer momento e em qualquer lugar.</p>
+        <a href="#" class="actions-link__item product-presentation__button">Explore agora e simplifique sua gestão!</a>
+      </div>
+      <div class="product-presentation__demo">
+        <img src="./images/product-presentation.png" alt="Dashboard">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="transformation" id="transforme-seu-delivery">
+  <div class="container">
+    <div class="transformation__header">
+      <h2 class="transformation__title">Veja como podemos transformar seu delivery</h2>
+      <p class="transformation__subtitle">Transforme seu Delivery com Nossa Solução Digital Completa</p>
+    </div>
+
+    <div class="transformation__items">
+    <!-- Item 1 -->
+      <div class="transformation__item transformation__item--customization">
+        <div class="transformation__item-header" style="background-color: #FF5733;"></div>
+        <div class="transformation__circle">
+          <img src="./images/bx-line-chart.png" alt="">
+        </div>
+        <h3 class="transformation__item-title">Aumente Suas Vendas</h3>
+        <p class="transformation__item-text">Com nosso cardápio digital, seus clientes terão uma experiência de pedido mais fácil e rápida. A navegação intuitiva e a praticidade no processo de seleção e pagamento ajudam a aumentar o volume de pedidos.</p>
+      </div>
+
+      <div class="transformation__item transformation__item--customization">
+        <div class="transformation__item-header" style="background-color: #6A1B9A;"></div>
+        <div class="transformation__circle">
+          <img src="./images/bx-palette.png" alt="">
+        </div>
+        <h3 class="transformation__item-title">Personalização e Marca</h3>
+        <p class="transformation__item-text">Diferencie-se da concorrência com uma página personalizada que reflete a identidade visual do seu restaurante.</p>
+      </div>
+
+      <div class="transformation__item transformation__item--customization">
+        <div class="transformation__item-header" style="background-color: #3498DB;"></div>
+        <div class="transformation__circle">
+          <img src="./images/bx-headphone.png" alt="">
+        </div>
+        <h3 class="transformation__item-title">Atendimento Simplificado</h3>
+        <p class="transformation__item-text">Facilite a comunicação com os clientes, oferecendo múltiplos canais de atendimento diretamente no cardápio.</p>
+      </div>
+
+
+      <div class="transformation__item transformation__item--customization">
+        <div class="transformation__item-header" style="background-color: #2ECC71;"></div>
+        <div class="transformation__circle">
+          <img src="./images/bx-pie-chart.png" alt="">
+        </div>
+        <h3 class="transformation__item-title">Análise e Melhorias Constantes</h3>
+        <p class="transformation__item-text">Com as integrações do Google Analytics e Facebook Pixel, você terá acesso a dados detalhados sobre como seus clientes interagem com seu cardápio, ajudando a otimizar as vendas e campanhas de marketing.</p>
+      </div>
+
+      <div class="transformation__item transformation__item--customization">
+        <div class="transformation__item-header" style="background-color: #F39C12;"></div>
+        <div class="transformation__circle">
+          <img src="./images/bx-clipboard.png" alt="">
+        </div>
+        <h3 class="transformation__item-title">Gestão de Pedidos e Fidelização</h3>
+        <p class="transformation__item-text">Nosso sistema não é só um cardápio; ele oferece ferramentas poderosas de gestão.</p>
+      </div>
+
+      <div class="transformation__item transformation__item--customization">
+        <div class="transformation__item-header" style="background-color: #16A085;"></div>
+        <div class="transformation__circle">
+          <img src="./images/bx-share-alt.png" alt="">
+        </div>
+        <h3 class="transformation__item-title">Integração Total com Redes Sociais</h3>
+        <p class="transformation__item-text">Conecte seu cardápio diretamente às principais redes sociais, permitindo que seus clientes compartilhem suas experiências e pratos favoritos com facilidade. Aumente a visibilidade do seu restaurante e atraia novos clientes diretamente das plataformas sociais.</p>
+      </div>
+
+      
+    </div>
+  </div>
+</section>
+
+{{!-- <section class="advantages">
+  <div class="container">
+    <div class="advantages-wrapper">
+      <img src="./images/sanduiche.png" class="advantages__image"/>
+      <div class="advantages__body">
+        <h2 class="advantages__title">Garanta sua Vantagem: 3 Meses Grátis ao Ser um dos Primeiros a Experimentar!</h2>
+        <p>Como agradecimento por ser parte deste lançamento emocionante, estamos presenteando os primeiros inscritos com 3 meses completos de mensalidade gratuita. 
+          Sim, você leu corretamente - três meses para desfrutar de todas as vantagens sem custo algum. 
+        </p>
+        <p><b>Após esse período, NADA será cobrado, dando-lhe total liberdade para decidir se deseja renovar e continuar aproveitando!</b></p>
+        <a href="#" class="actions-link__item advantages__button">Descobrir todas as vantagens</a>
+      </div>
+    </div>
+  </div>
+</section> --}}
+
+
+<section class="pricing" id="planos">
+  <div class="container">
+    <h2 class="pricing__title">Planos de Cardápio Digital para Restaurantes</h2>
+    <div class="pricing-wrapper">
+      <div class="pricing-card">
+        <h2 class="pricing-card__title">Start</h2>
+        <p class="pricing-card__subtitle">Perfeito para iniciar seu negócio</p>
+        <div class="pricing-card__price">
+          <div class="pricing-card__coin">R$</div>
+          <div class="pricing-card__decimal">00</div>
+          <div class="pricing-card__month">/mês</div>
+        </div>
+
+        <div class="pricing-card__divisor"></div>
+
+        <b>O que esta incluso?</b>
+
+
+        <div class="pricing-list">
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Menu digital para celular e computador
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Sem limite de produto
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            1 foto por produto
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            1 usuário por conta / 1 restaurante por conta
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Limite de até 10 categorias
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Taxa de entrega manual por distância ou bairro
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Suporte: Whatsapp (até 24 horas)
+          </div>
+        </div>
+
+        <a href="#" class="actions-link__item actions-link__secondcolor">Quero este plano</a>
+      </div>
+
+      <div class="pricing-card  pricing-card__yellow">
+        <h2 class="pricing-card__title">Super</h2>
+        <p class="pricing-card__subtitle">O melhor custo benefício</p>
+        <div class="pricing-card__price">
+          <div class="pricing-card__coin">R$</div>
+          <div class="pricing-card__decimal">17</div>
+          <div class="pricing-card__month">/mês</div>
+        </div>
+
+        <div class="pricing-card__divisor"></div>
+
+        <b>O que esta incluso? (Tudo da versão Start +)</b>
+
+
+        <div class="pricing-list">
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            QR CODE
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            5 fotos por produto
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            3 usuários por conta / 3 restaurantes por conta
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Sem limites de Categorias
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Cupom de Desconto para seus clientes
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Taxa de entrega automática por distância ou bairro
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Design: Personalização de cores
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Suporte: Whatsapp (até 24 horas) / e-mail / telefone
+          </div>
+        </div>
+        
+        <a href="#" class="actions-link__item">Quero este plano</a>
+      </div>
+
+      <div class="pricing-card">
+        <h2 class="pricing-card__title">Premium</h2>
+        <p class="pricing-card__subtitle">Os melhores recursos para seu cardápio</p>
+        <div class="pricing-card__price">
+          <div class="pricing-card__coin">R$</div>
+          <div class="pricing-card__decimal">25</div>
+          <div class="pricing-card__month">/mês</div>
+        </div>
+
+        <div class="pricing-card__divisor"></div>
+
+        <b>O que esta incluso?</b>
+
+
+        <div class="pricing-list">
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            QR CODE
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            15 fotos por produto
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            5 usuários por conta / 5 restaurantes por conta
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Personalização de Categorias
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Cupom de Desconto para seus clientes
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Programa de fidelidade
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Taxa de entrega automática por distância ou bairro
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Botão do whatsapp
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Design: Personalização de cores
+          </div>
+          <div class="pricing-list__item">
+            <img src="./images/check_circle.png" />
+            Suporte: Whatsapp (até 24 horas) / e-mail / telefone
+          </div>
+        </div>
+        
+        <a href="#" class="actions-link__item actions-link__secondcolor">Quero este plano</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="questions">
+  <div class="container">
+    <h2 class="questions__title">Perguntas frequentes</h2>
+    <div class="questions-wrapper">
+      <div class="questions__answers">
+        <button class="questions__accordion">
+          Como funciona a inscrição e quais são os benefícios?
+          <img src="./images/arrow-right-questions.png" />
+        </button>
+        <div class="questions__panel">
+          <p>Ao fazer a inscrição, você garante seu lugar como um dos primeiros a experimentar nosso serviço de cardápio online. Como benefício, você recebe 1 mês de uso gratuito no nosso plano Premium. Após esse período, nada será cobrado caso você decida não continuar com a assinatura.</p>
+        </div>
+
+        <button class="questions__accordion">
+          Quanto custa o serviço após o primeiro mês gratuito?
+          <img src="./images/arrow-right-questions.png" />
+        </button>
+        <div class="questions__panel">
+          <p>Após o primeiro mês gratuito, você terá a opção de renovar sua assinatura para continuar utilizando o serviço. Se optar por não renovar, nenhum valor será cobrado e seu acesso ao serviço será descontinuado.</p>
+        </div>
+
+        <button class="questions__accordion">
+           Posso cancelar a qualquer momento?
+          <img src="./images/arrow-right-questions.png" />
+        </button>
+        <div class="questions__panel">
+          <p>Sim, você pode cancelar sua assinatura a qualquer momento durante o período de avaliação gratuita ou após a renovação, sem qualquer penalidade.</p>
+        </div>
+
+        <button class="questions__accordion">
+          Meu usuário pode gerenciar vários estabelecimentos. Como funciona isso?
+          <img src="./images/arrow-right-questions.png" />
+        </button>
+        <div class="questions__panel">
+          <p>Cada usuário pode associar múltiplos estabelecimentos à sua conta. Isso permite que você gerencie os cardápios de vários locais a partir de uma única interface de administração.</p>
+        </div>
+
+        <button class="questions__accordion">
+          Preciso de suporte técnico, como posso entrar em contato?
+          <img src="./images/arrow-right-questions.png" />
+        </button>
+        <div class="questions__panel">
+          <p>Se precisar de suporte técnico, você pode entrar em contato com nossa equipe de suporte através do e-mail suporte@seuwebsite.com ou pelo telefone (XX) XXXX-XXXX. Estamos disponíveis para ajudar você a resolver qualquer problema ou dúvida.</p>
+        </div>
+
+      </div>
+      <img src="./images/questions.png" class="questions__image"/>
+    </div>
+  </div>
+</section>
+
+{{!-- <footer class="footer">
+  <div class="container">
+    <p class="footer__paragraph">Cardapiozin | Todos os direitos reservados - {{{currentYear}}}</p>
+  </div>
+</footer> --}}

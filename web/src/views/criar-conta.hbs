@@ -1,0 +1,25 @@
+{{> header-general}}
+
+<div class="login-customer login-customer__container">
+  <h1>Entrar</h1>
+  <p class="login-customer__subtitle">Crie seu cadastro</p>
+  <form class="login-customer__form" id="create-customer">
+      <input type="hidden" id="restaurantId" name="restaurantId" value="{{restaurantInfo.id}}">
+      <label class="login-customer__label" for="email">Email</label>
+      <input type="email" name="email" class="login-customer__input" placeholder="seu@email.com" required>
+      <label class="login-customer__label" for="email">Nome</label>
+      <input type="text" name="name" class="login-customer__input" placeholder="Seu nome" required>
+      <label class="login-customer__label" for="email">Telefone</label>
+      <input type="phone" name="phone" class="login-customer__input" placeholder="Seu telefone" required>
+      <label class="login-customer__label" for="password">Senha</label>
+      <input type="password" name="password" class="login-customer__input" placeholder="Digite sua senha" required>
+      <label class="login-customer__label" for="password">Repita a senha</label>
+      <input type="password" name="passwordTwo" class="login-customer__input" placeholder="Digite sua senha" required>
+      <button type="submit" class="login-customer__button">Cadastrar</button>
+  </form>
+  <div class="login-customer__links">
+      <a href="/conta">Já tem uma conta? Login</a>
+  </div>
+</div>
+
+{{> footer}}

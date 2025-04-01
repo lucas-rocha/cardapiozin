@@ -1,0 +1,299 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  OWNER
+  ADMIN
+  USER
+}
+
+enum InviteStatus {
+  ACCEPTED
+  PENDING
+  REFUSED
+}
+
+enum NotificationType {
+  INFO
+  WARNING
+  ERROR
+}
+
+enum PaymentMethod {
+  CREDIT
+  DEBIT
+  PIX
+  MONEY
+}
+
+model User {
+  id           String      @id @default(uuid())
+  firstName    String
+  lastName     String
+  email        String   @unique
+  photo_url    String?
+  position     String?
+  phone        String?
+  password     String
+  passwordDate DateTime @updatedAt
+  verification_token String?
+  is_email_verified Boolean @default(false)
+  reset_token String?
+  is_verified  Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  restaurant_id String?
+  restaurants User_Restaurant[]
+  notifications Notification[]
+}
+
+model User_Restaurant {
+  user User @relation(fields: [user_id], references: [id])
+  user_id String
+  restaurant Restaurant @relation(fields: [restaurant_id], references: [id])
+  restaurant_id String
+  role Role @default(USER)
+  accessType String?
+
+  @@id([user_id, restaurant_id])
+}
+
+model Customer {
+  id String @id @default(uuid())
+  first_name String
+  last_name  String?
+  email String?
+  phone String
+  password String
+  verification_token String?
+  is_email_verified Boolean @default(false)
+  reset_token String?
+  password_date DateTime @updatedAt
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  food_orders Order[]
+  
+  restaurant_id String?
+  restaurant Restaurant? @relation(fields: [restaurant_id], references: [id])
+}
+
+model Restaurant {
+  id String @id @default(uuid())
+  restaurant_name String
+  restaurant_url String? @unique
+  background_url String?
+  logo_url String?
+  brand_color String?
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  users User_Restaurant[]
+  menuItems Menu_item[]
+  blogPost Blog_post[]
+  food_orders Order[]
+  Coupon Coupon[]
+  restaurantHour Restaurant_Hour[]
+
+  Additional_Item Additional_Item[]
+
+  Category Category[]
+
+  invitations Invitation[]
+
+  notifications Notification[]
+  
+  customers Customer[]
+}
+
+model Invitation {
+  id String @id @default(uuid())
+  email String
+  token String @unique
+  status InviteStatus @default(PENDING)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  restaurant_id String
+  restaurant Restaurant @relation(fields: [restaurant_id], references: [id])
+}
+
+model Menu_item {
+  id Int @id @default(autoincrement())
+  item_name String @unique
+  price Decimal
+  image String?
+  description String?
+  serving Int?
+  quantity   Int       @default(1) 
+  visible    Boolean   @default(true)
+  unit_id Int?
+  unit_measure Int?
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  Restaurant Restaurant? @relation(fields: [restaurant_id], references: [id])
+  Unit Unit? @relation(fields: [unit_id], references: [id])
+  restaurant_id String?
+  menu_item_additional_item Menu_Item_Additional_Item[]
+  Menu_item_Category Menu_item_Category[]
+}
+
+model Order {
+  id Int @id @default(autoincrement())
+  total_amount Decimal
+  payment_method PaymentMethod
+  review Int?
+  created_at DateTime @default(now())
+  customer Customer @relation(fields: [customer_id], references: [id])
+  customer_id String
+  coupon Coupon? @relation(fields: [coupon_id], references: [id])
+  coupon_id Int?
+  restaurant Restaurant @relation(fields: [restaurant_id], references: [id])
+  restaurant_id String
+  order_items Order_item[]
+}
+
+model Order_item {
+  id Int @id @default(autoincrement())
+  quantity Int @default(1)
+  name String
+  image String?
+  price Decimal
+  order Order @relation(fields: [order_id], references: [id])
+  order_id Int
+  order_additional_item Order_additional_item[]
+}
+
+
+model Order_additional_item {
+  id Int @id @default(autoincrement())
+  quantity Int @default(1)
+  name String
+  price Decimal
+  order_item Order_item @relation(fields: [order_item_id], references: [id])
+  order_item_id Int
+}
+
+
+model Blog_post {
+  id Int @id @default(autoincrement())
+  title String
+  lead String
+  content String
+  image String
+  Restaurant Restaurant? @relation(fields: [restaurant_id], references: [id])
+  restaurant_id String?
+}
+
+model Days_Of_Week {
+  id Int @id @default(autoincrement())
+  name String
+  code Int
+
+  Restaurant_hour Restaurant_Hour[]
+}
+
+model Restaurant_Hour {
+  id Int @id @default(autoincrement())
+  open_time DateTime?
+  close_time DateTime?
+  is_closed Boolean @default(false)
+  is_24_hours Boolean @default(false)
+
+  Days_of_week Days_Of_Week @relation(fields: [days_of_week_id], references: [id])
+  days_of_week_id Int
+
+  Restaurant Restaurant? @relation(fields: [restaurant_id], references: [id])
+  restaurant_id String?
+}
+
+model Category {
+  id Int @id @default(autoincrement())
+  name String
+  restaurant_id String?
+  category_image_id Int?
+  created_at DateTime @default(now())
+  updated_at DateTime? 
+  category_images Category_Image? @relation(fields: [category_image_id], references: [id])
+  Restaurant Restaurant? @relation(fields: [restaurant_id], references: [id])
+  Menu_item_Category Menu_item_Category[]
+}
+
+
+model Category_Image{
+  id Int @id @default(autoincrement())
+  image String
+  category Category[]
+}
+
+model Menu_item_Category{
+  category_id Int
+  menu_item_id Int 
+  Category Category @relation(fields: [category_id], references: [id])
+  Menuitem Menu_item @relation(fields: [menu_item_id], references: [id])
+  @@id([category_id, menu_item_id])
+}
+
+model Unit {
+  id Int @id @default(autoincrement())
+  name String
+  Menu_item Menu_item[]
+}
+
+model Coupon {
+  id Int @id @default(autoincrement())
+  name String
+  description String
+  value Decimal
+  quantity Int
+  startAt DateTime
+  finishAt DateTime
+  createdAt DateTime
+  updatedAt DateTime?
+  deletedAt DateTime?
+  Restaurant Restaurant @relation(fields: [restaurant_id], references: [id])
+  restaurant_id String
+  Order Order[]
+}
+
+model Additional_Item{
+  id Int @id @default(autoincrement())
+  name String
+  price Decimal
+  quantity Int
+  restaurant_id String
+  Restaurant Restaurant @relation(fields: [restaurant_id], references: [id])
+  menu_item_additional_Item Menu_Item_Additional_Item[]
+}
+
+model Menu_Item_Additional_Item{
+  id Int @id @default(autoincrement())
+  menu_item_id Int
+  additional_item_id Int
+  add_item Boolean
+  remove_item Boolean
+  menuItems Menu_item @relation(fields: [menu_item_id], references: [id])
+  additional_item Additional_Item @relation(fields: [additional_item_id], references: [id])
+}
+
+model Notification {
+  id String @id @default(uuid())
+  actorName String
+  title String
+  message String
+  type NotificationType @default(INFO)
+  is_read Boolean @default(false)
+  user User? @relation(fields: [user_id], references: [id])
+  user_id String?
+  restaurant Restaurant? @relation(fields: [restaurant_id], references: [id])
+  restaurant_id String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

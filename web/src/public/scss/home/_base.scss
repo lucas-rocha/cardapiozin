@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: $main-color;
+  line-height: 36px;
+}
+
+section {
+  width: 100%;
+}
+
+input {
+  border-radius: 10px;
+  border: none;
+  text-indent: 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}

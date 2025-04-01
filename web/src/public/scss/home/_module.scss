@@ -1,0 +1,590 @@
+.actions-link {
+  display: flex;
+  margin: 1rem 0;
+  justify-content: center;
+  gap: .5rem;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    gap: .2rem;
+    color: #fff;
+    background-color: $color-primary;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  &__secondcolor {
+    background-color: $color-base;
+  }
+
+  &__header {
+    background-color: $color-base;
+    display: none;
+
+    @include screen-md {
+      display: flex;
+      padding: .5rem 1rem;
+      gap: .5rem;
+    }
+  }
+
+  @include screen-md {
+    margin-top: 3rem;
+    justify-content: flex-start;
+  }
+}
+
+.gradient-tomato {
+  background: $color-primary;
+}
+
+.second-support {
+  background: #404040;
+}
+
+.intro {
+  line-height: 36px;
+  
+  &__text {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 55px;
+    color: $color-base;
+  }
+
+  &__paragraph {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  &__text, &__paragraph {
+    @include screen-md {
+      text-align: start;
+    }
+  }
+
+  &__obs {
+    text-align: start;
+    margin: 1rem 0;
+
+    > a {
+      color: $color-primary;
+    }
+  }
+
+}
+
+.cadastro-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cadastro-form {
+  width: 100%;
+  max-width: 345px;
+  position: relative;
+  height: 570px;
+  overflow: hidden;
+
+  &__inputwrapper {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    transition: left 0.5s linear;
+
+  }
+  
+  &__buttons {
+    display: flex;
+    gap: .5rem;
+    
+    > .cadastro-form__button {
+      flex: 1;
+    }
+
+    > .cadastro-form__button:first-child {
+      background: $color-base;
+      flex: none;
+      width: 101px;
+    }
+  }
+
+}
+
+.subscribe-form__inputwrapper.active {
+  left: 0;
+}
+
+.subscribe-form {
+  background: $color-primary;
+
+  &__form {
+    width: 100%;
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 1px 7px -4px rgba(0, 0, 0, 0.75);
+
+    @include screen-md {
+      max-width: 600px;
+    }
+  }
+
+  &__inputwrapper {
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 1rem;
+  }
+
+  &__label {
+    margin-bottom: 5px;
+    margin-left: 3px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #888888;
+  }
+
+  &__input {
+    background: #F8F8F8;
+    // width: 345px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+
+  &__telarea {
+    display: flex;
+    gap: .7rem;
+
+    > input:last-child {
+      width: 0;
+      flex: 1;
+    }
+  }
+
+  &__ddd {
+    width: 55px;
+  }
+
+  &__button {
+    background: $color-primary;
+    height: 45px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.advantages {
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include screen-sm {
+      flex-direction: row;
+      gap: 3rem;
+    }
+  }
+
+  &__title {
+    color: $color-base;
+  }
+
+  &__image {
+    max-width: 320px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 350px;
+      height: 350px;
+      background: red;
+    }
+  }
+
+  &__body {
+    display: grid;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__button {
+    background: $color-base;
+
+    @include screen-sm {
+      align-self: end;
+      justify-self: baseline;
+    }
+  }
+}
+
+.pricing {
+  &__title {
+    text-align: center;
+    color: $gray-color;
+    margin-bottom: 2rem;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include screen-md {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+
+    &__title {
+      color: $color-base;
+    }
+
+    &__price {
+      display: flex;
+      margin: 1rem 0;
+      align-items: center;
+      height: 70px;
+    }
+
+    &__divisor {
+      width: 100%;
+      height: 1px;
+      background-color: #ccc;
+      margin: 1rem 0;
+    }
+
+    &__coin {
+      align-self: baseline;
+    }
+
+    &__month {
+      align-self: flex-end;
+    }
+
+    &__decimal {
+      font-size: 5rem;
+    }
+
+    &__yellow {
+      background-color: #FFEBEB;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      line-height: 24px;
+
+      > img {
+        align-self: baseline;
+      }
+    }
+  }
+}
+
+.questions {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  &__title {
+    color: $color-base;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  &__answers {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__accordion {
+    border-top: 1px solid #ccc;
+    padding: 1.5rem 0;
+    background: transparent;
+    border-radius: 0;
+    text-align: start;
+    color: $color-base;
+    font-size: 16px;
+
+    &:last-of-type {
+      border-bottom: 1px solid #ccc;
+    }
+
+    > img {
+      margin-left: 1rem;
+    }
+  }
+
+  &__panel {
+    display: none;
+
+    > p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__image {
+    display: none;
+    align-self: baseline;
+
+    @include screen-sm {
+      display: block;
+    }
+  }
+}
+
+.stepper {
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include screen-md {
+      min-width: 300px;
+    }
+  }
+
+  &__divisor {
+    position: absolute;
+    width: calc(100% - 15px);
+    height: 1px;
+    background-color: #DADADA;
+    top: 12px;
+    left: calc(50% + 15px);
+    z-index: 2;
+  }
+
+  &__name {
+    color: #888888;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+.cadastro-form {
+  display: flex;
+  justify-content: center;
+
+  .subscribe-form__label {
+    color: #404040;
+  }
+
+  .subscribe-form__input {
+    background: #fff;
+  }
+}
+
+.footer {
+  background: $gray-color;
+  color: $main-color;
+
+  &__paragraph {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.product-presentation {
+  &__logo {
+    max-width: 158px;
+  }
+
+  &__text {
+    margin: 2rem 0;
+
+    @include screen-sm {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 500px;
+    }
+  }
+
+  &__demo {
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  &__button {
+    margin-top: 2rem;
+
+    @include screen-sm {
+      max-width: 350px;
+    }
+  }
+
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  > ul {
+    display: flex;
+    gap: 2rem;
+
+    list-style: none;
+  }
+
+  &__item {
+    > a {
+      text-decoration: none;
+      color: $main-color;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.transformation {
+  &__title {
+    color: $color-base;
+    text-align: center;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  &__items {
+    display: grid;
+    gap: 1rem;
+    margin-top: 5rem;
+    
+    @include screen-sm {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 5rem;
+      row-gap: 3rem;
+    }
+
+    @include screen-md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 
+    0px 1px 3px rgba(0, 0, 0, 0.12), /* Sombras para criar a leve elevação */
+    0px 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+  }
+
+  &__item-header {
+    top: 0;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    position: absolute;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  &__item-title {
+    color: $color-base;
+  }
+
+  &__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px; /* Tamanho do círculo */
+    height: 44px;
+    background-color: #FFFFFF; /* Cor de fundo */
+    border-radius: 50%; /* Faz com que o elemento seja um círculo */
+    box-shadow: 
+    0px 1px 3px rgba(0, 0, 0, 0.12), /* Sombras para criar a leve elevação */
+    0px 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+  &::before {
+    position: absolute;
+    left: calc(50% - 150px);
+    content: "";
+    width: 300px;
+    height: 2px;
+    background-color: #E8E8E8;
+  }
+}
+
+.congratulations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  max-width: 850px;
+  text-align: center;
+  align-items: center;
+  padding: 0 2rem;
+
+  @include screen-md {
+    padding: 0;
+  }
+
+  > h1 {
+    max-width: 700px;
+    color: $main-color;
+  }
+
+  > img {
+    margin-bottom: 2rem;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+
+    > a:first-child {
+      background-color: $main-color;
+    }
+  }
+
+}

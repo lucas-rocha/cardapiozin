@@ -1,0 +1,57 @@
+{{> header-general}}
+
+{{#if loggedCustomer}}
+<div class="container">
+  <div class="personal-info">
+    <h2 class="personal-info__title">Informações pessoais</h2>
+    
+    {{#if loggedCustomer.first_name}}
+    <div class="personal-info__field">
+      <label class="personal-info__label">Nome</label>
+      <div class="personal-info__value">{{loggedCustomer.first_name}}</div>
+    </div>
+    {{/if}}
+
+    {{#if loggedCustomer.last_name}}
+    <div class="personal-info__field">
+      <label class="personal-info__label">Sobrenome</label>
+      <div class="personal-info__value">{{loggedCustomer.last_name}}</div>
+    </div>
+    {{/if}}
+
+    {{#if loggedCustomer.email}}
+    <div class="personal-info__field">
+      <label class="personal-info__label">Email</label>
+      <div class="personal-info__value">{{loggedCustomer.email}}</div>
+    </div>
+    {{/if}}
+
+    {{#if loggedCustomer.phone}}
+    <div class="personal-info__field">
+      <label class="personal-info__label">Telefone</label>
+      <div class="personal-info__value">{{loggedCustomer.phone}}</div>
+    </div>
+    {{/if}}
+  </div>
+</div>
+{{else}}
+<div class="login-customer login-customer__container">
+  <h1>Entrar</h1>
+  <p class="login-customer__subtitle">Entre com seu email e senha para acessar</p>
+  <form class="login-customer__form" id="form-login">
+      <input type="hidden" id="restaurantId" name="restaurantId" value="{{restaurantInfo.id}}">
+      <label class="login-customer__label" for="email">Email</label>
+      <input type="email" name="email" class="login-customer__input" type="email" placeholder="seu@email.com" required>
+      <label class="login-customer__label" for="password">Senha</label>
+      <input type="password" name="password" class="login-customer__input" type="password" placeholder="Digite sua senha" required>
+      <button type="submit" class="login-customer__button">Entrar</button>
+  </form>
+  <div class="login-customer__links">
+      <a href="/criar-conta">Não tem uma conta? Cadastre-se</a><br>
+      <a href="#">Esqueceu sua senha?</a>
+  </div>
+</div>
+
+{{/if}}
+
+{{> footer}}

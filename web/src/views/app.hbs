@@ -1,0 +1,129 @@
+<div class="modal" style="display: none;" id="cep-modal"></div>
+
+<header class="header">
+  <div class="header__overlay"></div>
+  <div class="container">
+    <div class="header__wrapper">
+      <button class="header__button">Aberto agora</button>
+      <div class="header-brand">
+        <img src="/images/app/logo.png" alt="">
+        <div>
+          <h2 class="header__name">{{restaurantInfo.restaurant_name}}</h2>
+          <p class="header__address">Av. Ver. Walter Melarato, 375, São Vicente, SP</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__info">
+    <div class="container">
+      <div class="header__icons">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+          <path d="M7.5 1.25C4.05375 1.25 1.25 4.05375 1.25 7.5C1.25 10.9462 4.05375 13.75 7.5 13.75C10.9462 13.75 13.75 10.9462 13.75 7.5C13.75 4.05375 10.9462 1.25 7.5 1.25ZM7.5 12.5C4.74313 12.5 2.5 10.2569 2.5 7.5C2.5 4.74313 4.74313 2.5 7.5 2.5C10.2569 2.5 12.5 4.74313 12.5 7.5C12.5 10.2569 10.2569 12.5 7.5 12.5Z" fill="white"/>
+          <path d="M8.125 4.375H6.875V8.125H10.625V6.875H8.125V4.375Z" fill="white"/>
+        </svg>
+        <p>58-73 min</p>
+      </div>
+      <div class="header__icons">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+        <g clip-path="url(#clip0_991_32933)">
+        <path d="M3.1844 11.0864H4.24751V10.2846H3.19411C2.83003 10.2846 2.64557 10.0953 2.64557 9.72178V3.21733C2.64557 2.8438 2.83003 2.64957 3.19411 2.64957H10.2961C10.6553 2.64957 10.8494 2.8438 10.8494 3.21733V10.5286L11.631 10.0903V3.2024C11.631 2.31588 11.1747 1.84772 10.3106 1.84772H3.1844C2.31547 1.84772 1.86401 2.31588 1.86401 3.2024V9.73674C1.86401 10.6232 2.31547 11.0864 3.1844 11.0864ZM11.2038 5.39876H12.8737C13.1213 5.39876 13.2961 5.44359 13.4951 5.66769L15.0193 7.42582C15.1504 7.57521 15.2184 7.78439 15.2184 7.9637V9.72178C15.2184 10.0953 15.029 10.2846 14.665 10.2846H13.8834V11.0864H14.6795C15.5436 11.0864 15.9999 10.6232 15.9999 9.73674V7.97862C15.9999 7.49055 15.9223 7.26143 15.6553 6.95267L14.0048 5.04019C13.7184 4.71145 13.398 4.59691 12.9223 4.59691H11.2038V5.39876ZM12.5388 8.02345H14.6553C14.6553 7.90394 14.6116 7.83917 14.5388 7.75451L13.0922 6.08606C12.9854 5.97152 12.8592 5.89681 12.7232 5.89681H12.1213V7.60011C12.1213 7.86408 12.2815 8.02345 12.5388 8.02345ZM5.46595 12.476C6.37856 12.476 7.12129 11.714 7.12129 10.7727C7.12129 9.83632 6.37856 9.07434 5.46595 9.07434C4.54849 9.07434 3.80091 9.83632 3.80091 10.7727C3.80091 11.714 4.54849 12.476 5.46595 12.476ZM5.46595 11.7986C4.91257 11.7986 4.46109 11.3404 4.46109 10.7727C4.46109 10.2099 4.91257 9.74669 5.46595 9.74669C6.01449 9.74669 6.46112 10.2099 6.46112 10.7727C6.46112 11.3404 6.01449 11.7986 5.46595 11.7986ZM12.4611 12.476C13.3786 12.476 14.1164 11.714 14.1164 10.7727C14.1164 9.83632 13.3786 9.07434 12.4611 9.07434C11.5436 9.07434 10.8009 9.83632 10.8009 10.7727C10.8009 11.714 11.5436 12.476 12.4611 12.476ZM12.4611 11.7986C11.9126 11.7986 11.4611 11.3404 11.4611 10.7727C11.4611 10.2099 11.9126 9.74669 12.4611 9.74669C13.0048 9.74669 13.4563 10.2099 13.4563 10.7727C13.4563 11.3404 13.0145 11.7986 12.4611 11.7986ZM6.75722 11.0864H11.1844V10.2846H6.75722V11.0864Z" fill="white"/>
+        <path d="M3.13107 6.41979C4.83981 6.41979 6.26214 4.96052 6.26214 3.2074C6.26214 1.44433 4.8495 0 3.13107 0C1.41748 0 0 1.44931 0 3.2074C0 4.97544 1.41262 6.41979 3.13107 6.41979Z" fill="white"/>
+        <path d="M3.13106 5.73749C4.46599 5.73749 5.59707 4.592 5.59707 3.20743C5.59707 1.81789 4.48542 0.677368 3.13106 0.677368C1.78154 0.677368 0.665039 1.82287 0.665039 3.20743C0.665039 4.60194 1.78154 5.73749 3.13106 5.73749Z" fill="black" fill-opacity="0.85"/>
+        <path d="M1.98066 3.59586C1.81075 3.59586 1.67969 3.45641 1.67969 3.28707C1.67969 3.12272 1.81561 2.98326 1.98066 2.98326H2.85444V1.73816C2.85444 1.56882 2.99037 1.43933 3.15542 1.43933C3.32046 1.43933 3.45639 1.56882 3.45639 1.73816V3.28707C3.45639 3.46139 3.32532 3.59586 3.15542 3.59586H1.98066Z" fill="white"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_991_32933">
+        <rect width="16" height="14" fill="white"/>
+        </clipPath>
+        </defs>
+        </svg>
+        <p>Mínimo R$ 5,00</p>
+      </div>
+      <div class="header__icons">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+          <path d="M11.875 6.875H8.125V3.125H6.875V6.875H3.125V8.125H6.875V11.875H8.125V8.125H11.875V6.875Z" fill="white"/>
+        </svg>
+        <p>Veja Mais</p>
+      </div>
+    </div>
+    <div class="header__overlay"></div>
+  </div>
+</header>
+
+<section class="config">
+  <div class="container">
+    <section class="search-section">
+      <img src="/images/app/logo.png" alt="" class="config__image">
+      <div class="search">
+        <input type="text" placeholder="Procure aqui pelo lanche" class="search__input">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+          <path d="M10 18.5C11.775 18.4996 13.4988 17.9054 14.897 16.812L19.293 21.208L20.707 19.794L16.311 15.398C17.405 13.9997 17.9996 12.2754 18 10.5C18 6.089 14.411 2.5 10 2.5C5.589 2.5 2 6.089 2 10.5C2 14.911 5.589 18.5 10 18.5ZM10 4.5C13.309 4.5 16 7.191 16 10.5C16 13.809 13.309 16.5 10 16.5C6.691 16.5 4 13.809 4 10.5C4 7.191 6.691 4.5 10 4.5Z" fill="#555555"/>
+        </svg>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" class="menu-icon" id="menu-icon" style="display: none;">
+      <path d="M7.49976 6.24921H22.4998V8.74921H7.49976V6.24921ZM8.74976 13.7492H21.2498V16.2492H8.74976V13.7492ZM6.87476 21.2492H23.1248V23.7492H6.87476" fill="#383838"/>
+      </svg>
+    </section>
+
+    <section class="category-section">
+        <h3 class="category__title">Categorias</h3>
+
+        <div class="category">
+          <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides" style="padding-top: 1px;">
+                  {{#each categories}}
+                    <li class="glide__slide">
+                      <a href="#{{this.anchor}}" class="category__link">
+                        <div class="category__item">
+                          <div class="category__option" data-section="{{this.anchor}}">
+                            <img src="{{this.image}}" alt="" />
+                          </div>
+                          <p class="category__name">{{this.name}}</p>
+                        </div>
+                      </a>
+                    </li>
+                  {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+
+</section>
+
+
+
+<section class="shopping">
+  <div class="container">
+    <div class="products">
+
+      {{#each products}}
+        <div class="products__items" id="{{this.anchor}}">
+          <h3 class="products__title">{{this.category}}</h3>
+          <div class="products__wrapper">
+            {{#each items}}
+              <div class="products__item" data-product-id="{{this.id}}">
+                <div class="products__content">
+                  <span class="products__name">{{name}}</span>
+                  <p class="products__description">
+                    {{description}}
+                  </p>
+                  {{!-- <img src="./images/app/stars.png" alt="" /> --}}
+                  <p class="products__price">{{price}}</p>
+                </div>
+                <div class="products__box">
+                  <div class="products__image" style="background-image: url('/images/app/product_image.png');"></div>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+        </div>
+      {{/each}}
+
+    </div>
+  </div>
+</section>
+
+{{> footer }}

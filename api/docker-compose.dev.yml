@@ -1,0 +1,31 @@
+services:
+  cardapiozindb:
+    image: postgres
+    container_name: cardapiozindb
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=ProjectX_DB
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgres/data
+
+  cardapiozin.api:
+    image: cardapiozin.api
+    build:
+      context: .
+    environment:
+      - PG_HOST=cardapiozindb
+      - DATABASE_URL=postgresql://postgres:123456@cardapiozindb:5432/ProjectX_DB?schema=public
+    depends_on:
+      - cardapiozindb
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+
+volumes:
+  postgres_data:
