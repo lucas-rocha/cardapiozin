@@ -14,14 +14,14 @@ const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
 const uglify = require('gulp-uglify')
 
-const runTSNodeDev = async () => {
-  killPort(3000)
-  shell.task(['ts-node-dev --respawn --transpile-only src/index.ts'])();
-} 
+// const runTSNodeDev = async () => {
+//   killPort(3000)
+//   shell.task(['ts-node-dev --respawn --transpile-only src/index.ts'])();
+// } 
 
 const paths = {
   js: {
-    src: path.join(__dirname, '../src/public/js/main.js'),
+    src: path.join(__dirname, '../src/public/js/bundle.js'),
     dest: path.join(__dirname, '../dist/public/js/')
   }
 };
@@ -52,4 +52,4 @@ const scripts = () => {
 
 
 
-task('prod', parallel(runTSNodeDev, styles, images, scripts))
+task('prod', parallel(styles, images, scripts))

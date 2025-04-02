@@ -19,7 +19,7 @@ class RestaurantService {
     static findBySubdomain(subdomain) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const response = yield fetch(`http://localhost:5000/info/${subdomain}`);
+                const response = yield fetch(`http://212.85.0.193:5000/info/${subdomain}`);
                 if (!response.ok) {
                     throw new Error(`Erro na requisição: ${response.statusText}`);
                 }

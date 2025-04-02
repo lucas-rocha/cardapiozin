@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:18
 
 WORKDIR /usr/src/app
 
@@ -8,14 +8,14 @@ COPY prisma ./prisma/
 
 COPY .env .env
 
-RUN npm install --only=production
+RUN npm install
 
 COPY . .
 
-RUN npm run build
+# RUN npm run dev
 RUN npx prisma generate
 RUN npx prisma migrate deploy
 
 EXPOSE 5000
 
-CMD ["node", "dist/src/index.js"]
+CMD ["npm", "run", "dev"]

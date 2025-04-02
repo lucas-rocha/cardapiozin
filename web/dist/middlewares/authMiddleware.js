@@ -22,7 +22,7 @@ const authMiddleware = (req, res, next) => __awaiter(void 0, void 0, void 0, fun
     if (token) {
         const claims = decodeToken(token);
         req.context.user_id = claims.user_id;
-        const customer = yield (0, axios_1.default)(`http://localhost:5000/customers/me`, {
+        const customer = yield (0, axios_1.default)(`http://212.85.0.193:5000/customers/me`, {
             headers: {
                 'x-access-token': token
             }

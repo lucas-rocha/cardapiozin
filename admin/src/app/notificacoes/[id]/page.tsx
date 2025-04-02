@@ -5,7 +5,7 @@ import PrivateRoute from "@/components/PrivateRoute"
 import { updateNotificationStatus } from "@/services/notification"
 import { useEffect, useState } from "react"
 
-export const Notification = ({ params }: { params: { id: string } }) => {
+export default function Notification({ params }: { params: { id: string } }) {
   const [notification, setNotification] = useState([])
   const { id } = params
 
@@ -24,5 +24,3 @@ export const Notification = ({ params }: { params: { id: string } }) => {
     </PrivateRoute>
   )
 }
-
-export default Notification
