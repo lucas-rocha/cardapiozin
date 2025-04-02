@@ -3,9 +3,8 @@ require('@babel/register')({
 });
 
 const path = require('path')
-const { task, src, dest, series, parallel } = require('gulp')
+const { task, src, dest, parallel } = require('gulp')
 const cleanCSS = require('gulp-clean-css')
-const shell = require("gulp-shell")
 const killPort = require('kill-port')
 const imagemin = require('gulp-imagemin')
 const babelify = require('babelify')
@@ -13,11 +12,6 @@ const browserify = require('browserify')
 const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
 const uglify = require('gulp-uglify')
-
-// const runTSNodeDev = async () => {
-//   killPort(3000)
-//   shell.task(['ts-node-dev --respawn --transpile-only src/index.ts'])();
-// } 
 
 const paths = {
   js: {
@@ -33,7 +27,7 @@ const styles = () => {
 }
 
 const images = () => {
-  return src('./src/public/images/*')
+  return src('./src/public/images/**/*')
     .pipe(imagemin())
     .pipe(dest('./dist/public/images'))
 }
